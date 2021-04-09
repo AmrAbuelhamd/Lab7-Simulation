@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/actorsFragment">
+
+    <fragment
+        android:id="@+id/actorsFragment"
+        android:name="com.blogspot.soyamr.lab7simulation.ActorsFragment"
+        android:label="fragment_actors"
+        tools:layout="@layout/fragment_actors" >
+        <action
+            android:id="@+id/action_actorsFragment_to_performanceFragment"
+            app:destination="@id/performanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/performanceFragment"
+        android:name="com.blogspot.soyamr.lab7simulation.TickitsFragment"
+        android:label="fragment_performance"
+        tools:layout="@layout/fragment_tickits" >
+        <action
+            android:id="@+id/action_performanceFragment_to_budgetFragment"
+            app:destination="@id/budgetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.blogspot.soyamr.lab7simulation.BudgetFragment"
+        android:label="fragment_budget"
+        tools:layout="@layout/fragment_budget" >
+        <action
+            android:id="@+id/action_budgetFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.blogspot.soyamr.lab7simulation.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>
